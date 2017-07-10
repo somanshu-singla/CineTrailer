@@ -1,0 +1,7 @@
+#Mon Jul 10 13:43:19 IST 2017
+base.0=/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_99ecad759f0b646755d8ed0359c56371a67d8dd3
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_3d570bb81e0a26c4d726fec125b51b471fb3887d/classes.dex
+base.1=/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_3d570bb81e0a26c4d726fec125b51b471fb3887d
+file.0=/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_99ecad759f0b646755d8ed0359c56371a67d8dd3/classes.dex

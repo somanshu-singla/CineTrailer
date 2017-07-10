@@ -1,0 +1,83 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:2:1-24:12
+	package
+		ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:3:5-47
+		INJECTED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml
+		INJECTED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml
+		INJECTED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml
+		INJECTED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:5:22-64
+application
+ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:7:5-22:19
+MERGED from [com.android.support:appcompat-v7:24.2.1] /home/somanshu/.android/build-cache/5b057380af3c4eecd7f4816e1f4a7091feb607e1/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.2.1] /home/somanshu/.android/build-cache/8734d6a267a59c03000dccdee9c11650c08bbc61/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.1] /home/somanshu/.android/build-cache/532455fded1f32d4a688f0bcc5465956b78fa29f/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] /home/somanshu/.android/build-cache/33c40df1be8e8f56e53708706b85fa786fb2ca0c/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] /home/somanshu/.android/build-cache/71d62dab088b4a19a8f3cd92df4ad50a7ebb000e/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] /home/somanshu/.android/build-cache/280d802a8855b4cef60a63f66f45a42ecc9d4dd2/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] /home/somanshu/.android/build-cache/3c9eca1de694b0b2bbc2169c783c16b3bcf42451/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.1] /home/somanshu/.android/build-cache/a77504e0d76f2dcdde0fe273605cf3f1b3bca482/output/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:24.2.1] /home/somanshu/.android/build-cache/4d3c28c5812a07370d79204293c5150a62cf5f3f/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/somanshu/.android/build-cache/e9a6db1de6b40026fb72c222e0daf971de19a2ef/output/AndroidManifest.xml:9:5-20
+	android:label
+		ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:10:9-41
+	android:supportsRtl
+		ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:11:9-35
+	android:allowBackup
+		ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:8:9-35
+	android:icon
+		ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:9:9-43
+	android:theme
+		ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:12:9-40
+activity#com.example.somanshu.cinetrailer.MainActivity
+ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:13:9-19:20
+	android:name
+		ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:13:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:14:13-18:29
+action#android.intent.action.MAIN
+ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:15:17-69
+	android:name
+		ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:15:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:17:17-77
+	android:name
+		ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:17:27-74
+activity#com.example.somanshu.cinetrailer.MovieDetailsActivity
+ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:20:9-58
+	android:name
+		ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:20:19-55
+activity#com.example.somanshu.cinetrailer.YoutubeWeb
+ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:21:9-57
+	android:name
+		ADDED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml:21:19-45
+uses-sdk
+INJECTED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:24.2.1] /home/somanshu/.android/build-cache/5b057380af3c4eecd7f4816e1f4a7091feb607e1/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:24.2.1] /home/somanshu/.android/build-cache/8734d6a267a59c03000dccdee9c11650c08bbc61/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:24.2.1] /home/somanshu/.android/build-cache/532455fded1f32d4a688f0bcc5465956b78fa29f/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:24.2.1] /home/somanshu/.android/build-cache/33c40df1be8e8f56e53708706b85fa786fb2ca0c/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:24.2.1] /home/somanshu/.android/build-cache/71d62dab088b4a19a8f3cd92df4ad50a7ebb000e/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] /home/somanshu/.android/build-cache/280d802a8855b4cef60a63f66f45a42ecc9d4dd2/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] /home/somanshu/.android/build-cache/3c9eca1de694b0b2bbc2169c783c16b3bcf42451/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.2.1] /home/somanshu/.android/build-cache/a77504e0d76f2dcdde0fe273605cf3f1b3bca482/output/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-compat:24.2.1] /home/somanshu/.android/build-cache/4d3c28c5812a07370d79204293c5150a62cf5f3f/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/somanshu/.android/build-cache/e9a6db1de6b40026fb72c222e0daf971de19a2ef/output/AndroidManifest.xml:5:5-7:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:24.2.1] /home/somanshu/.android/build-cache/5b057380af3c4eecd7f4816e1f4a7091feb607e1/output/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml
+		INJECTED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml
+		INJECTED from /home/somanshu/AndroidStudioProjects/CineTrailer/app/src/main/AndroidManifest.xml

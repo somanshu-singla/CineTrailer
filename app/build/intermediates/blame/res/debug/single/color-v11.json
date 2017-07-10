@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/home/somanshu/.android/build-cache/5b057380af3c4eecd7f4816e1f4a7091feb607e1/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/home/somanshu/.android/build-cache/5b057380af3c4eecd7f4816e1f4a7091feb607e1/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    }
+]
