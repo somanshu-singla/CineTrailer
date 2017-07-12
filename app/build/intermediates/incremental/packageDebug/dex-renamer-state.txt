@@ -1,4 +1,4 @@
-#Wed Jul 12 20:52:11 IST 2017
+#Wed Jul 12 20:55:55 IST 2017
 base.0=/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

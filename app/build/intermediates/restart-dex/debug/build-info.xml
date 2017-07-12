@@ -2,30 +2,67 @@
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="23"
-    build-mode="COLD"
+    build-mode="FULL"
     density="xhdpi"
     format="10"
     plugin-version="2.3.1"
-    timestamp="1499872870616"
+    timestamp="1499873077131"
     token="-5672860404200988057"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="1452" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="92" />
     <task
         name="verifier"
-        duration="0" />
+        duration="31" />
+
+    <artifact
+        location="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/outputs/apk/app-debug.apk"
+        type="SPLIT_MAIN" />
+    <artifact
+        location="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1499872813618"
+        timestamp="1499873077131"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
@@ -64,9 +101,5 @@
             location="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
     </build>
-    <build
-        build-mode="COLD"
-        timestamp="1499872870616"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>
