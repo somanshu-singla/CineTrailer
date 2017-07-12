@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="71438da7d9a9a837d0aee6d7125d40e27b24d2c1">
-        <dex dex="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_99ecad759f0b646755d8ed0359c56371a67d8dd3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
         <dex dex="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_3d570bb81e0a26c4d726fec125b51b471fb3887d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="71438da7d9a9a837d0aee6d7125d40e27b24d2c1">
+        <dex dex="/home/somanshu/AndroidStudioProjects/CineTrailer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_99ecad759f0b646755d8ed0359c56371a67d8dd3/classes.dex" />
     </item>
 
 </items>

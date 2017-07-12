@@ -7,12 +7,11 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -26,9 +25,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
-
-public class MainActivity extends AppCompatActivity implements IntentCaller{
+public class MainActivity extends AppCompatActivity{
 
     public MovieAdapter movieAdapter ;
     public ArrayList<Movie> mlist =new ArrayList<Movie>();
@@ -36,24 +33,20 @@ public class MainActivity extends AppCompatActivity implements IntentCaller{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        QueryUtils call = new QueryUtils(this);
-        Calendar calendar=Calendar.getInstance();
-        SimpleDateFormat dateformat=new SimpleDateFormat("yyyy-MM-dd", Locale.US);
-        calendar.add(Calendar.DATE,-31);
-        String date = dateformat.format(calendar.getTime());
-        String jsonlink="http://api.themoviedb.org/3/discover/movie?api_key=e4d10cb7c3b4358ff07ad16d7f546c25&append_to_response=videos&primary_release_date.gte="+date;
-        Log.e("onCreate","Done");
-        call.execute(jsonlink);
-    }
-    public MovieAdapter getadap()
-    {
-        return new MovieAdapter(this,mlist,this);
-    }
-    public void callIntent(Movie movie)
-    {
-        Intent it=new Intent(MainActivity.this,MovieDetailsActivity.class);
-        it.putExtra("movie",movie);
-        startActivity(it);
+        try {
+            Calendar calendar = Calendar.getInstance();
+            SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+            calendar.add(Calendar.DATE, -30);
+            String date = dateformat.format(calendar.getTime());
+            String jsonlink = "http://api.themoviedb.org/3/discover/movie?api_key=e4d10cb7c3b4358ff07ad16d7f546c25&append_to_response=videos&primary_release_date.gte=" + date;
+            Log.e("onCreate", "Done");
+            QueryUtils call = new QueryUtils(this);
+            call.execute(jsonlink);
+        }
+        catch (Exception e)
+        {
+            Log.e("onCreate","Error");
+        }
     }
     private class QueryUtils extends AsyncTask<String,Void,JSONObject>
     {
@@ -71,43 +64,56 @@ public class MainActivity extends AppCompatActivity implements IntentCaller{
         }
         @Override
         protected JSONObject doInBackground(String... strings) {
-            JSONObject root=null;
+            String root=null;
+            JSONObject jsonObject=null;
             try
             {
                 Log.e("url",strings[0]);
-                root=new JSONObject(fetch(new URL(strings[0])));
-                //for internet - uses permission
+                root=fetch(new URL(strings[0]));
+                if(root==null)
+                {
+                    return null;
+                }
+                Log.e("doinbackground","Json string extracted");
             }
             catch (Exception e)
             {
-                Toast.makeText(mContext,"Network Error",Toast.LENGTH_SHORT);
-                return root;
+                Log.e("fetch ","error doin" +
+                        "background");
+                return null;
             }
-            return root;
+            try
+            {
+                jsonObject=new JSONObject(root);
+            }
+            catch (JSONException e)
+            {
+                return null;
+            }
+            return jsonObject;
         }
 
         @Override
         protected void onPostExecute(JSONObject root) {
             if(root==null) {
+                Toast.makeText(mContext,"No internet Connection",Toast.LENGTH_SHORT).show();
                 progressDialog.dismiss();
-                Toast.makeText(mContext, "Network Error", Toast.LENGTH_SHORT);
                 return;
             }
-            Log.e("root ","obtained");
+            Log.e("onPostExecute ","root obtained");
             try
             {
 
                 JSONArray movielist=root.getJSONArray("results");
-                Log.e("List huahua","lol");
                 for(int i=0;i<movielist.length();i++)
                 {
                     Log.e("loop ",""+i);
                     mlist.add(new Movie(movielist.getJSONObject(i)));
                 }
                 progressDialog.dismiss();
-                Log.e("progressdialog","Dismissed");
+                Log.e("onPostExecute","progressdialog Dismissed");
                 Log.e("List size ",""+movielist.length());
-                movieAdapter=getadap();
+                movieAdapter=new MovieAdapter(mContext,mlist);
                 ListView listView=(ListView)findViewById(R.id.listview);
                 listView.setAdapter(movieAdapter);
                 Log.e("list","created");
@@ -126,12 +132,10 @@ public class MainActivity extends AppCompatActivity implements IntentCaller{
             String json=null;
             try {
                 connection = (HttpURLConnection) url.openConnection();
-                Log.e("Connection ","Done Line 95");
                 connection.setRequestMethod("GET");
                 Log.e("String ",url.toString());
-                Log.e("Connection ","Done Line 96");
                 connection.connect();
-                Log.e("Connection ","Done Line 98");
+                Log.e("fetch module ","Connected");
                 inputStream = connection.getInputStream();
                 BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
                 String line;
@@ -140,11 +144,10 @@ public class MainActivity extends AppCompatActivity implements IntentCaller{
                     fetched.append(line);
                 }
                 json=fetched.toString();
-                Log.e("Line ","103");
             }
-            catch (IOException exp)
+            catch (Exception exp)
             {
-                Log.e("Line ","error");
+                return null;
             }
             finally
             {
@@ -159,10 +162,10 @@ public class MainActivity extends AppCompatActivity implements IntentCaller{
                     }
                     catch (IOException e)
                     {
-                        return "";
+                        return null;
                     }
                 }
-                Log.e("Everything ","closed");
+                Log.e("fetch"," connection closed");
             }
             return json;
         }

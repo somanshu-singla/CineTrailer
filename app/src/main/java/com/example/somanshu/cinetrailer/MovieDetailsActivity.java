@@ -27,6 +27,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 import static android.R.attr.path;
+import static com.example.somanshu.cinetrailer.R.id.date;
 
 public class MovieDetailsActivity extends AppCompatActivity {
 
@@ -40,15 +41,15 @@ public class MovieDetailsActivity extends AppCompatActivity {
         m=movie;
         setTitle(movie.getOriginal_title());
         ImageView imageView=(ImageView)findViewById(R.id.movie_poster);
+        TextView title=(TextView)findViewById(R.id.originaltitle);
+        TextView date=(TextView)findViewById(R.id.date);
+        TextView description=(TextView)findViewById(R.id.description);
+        trailer=(TextView)findViewById(R.id.trailer);
         Log.e("Called ","adap");
         Log.e("Image ",movie.getPoster_path());
         Picasso.with(this).load(movie.getPoster_path()).into(imageView);
-        TextView title=(TextView)findViewById(R.id.originaltitle);
-        trailer=(TextView)findViewById(R.id.trailer);
         title.setText(movie.getOriginal_title());
-        TextView date=(TextView)findViewById(R.id.date);
         date.setText("Release date : "+movie.getRelease_date());
-        TextView description=(TextView)findViewById(R.id.description);
         description.setText(movie.getOverview());
         String url=movie.getTrailer_path();
         QueryUtils util=new QueryUtils();
@@ -61,7 +62,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
             trailer.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(MovieDetailsActivity.this,"No trailer available",Toast.LENGTH_SHORT);
+                    Toast.makeText(MovieDetailsActivity.this,"No trailer available",Toast.LENGTH_SHORT).show();
                 }
             });
         }
@@ -107,6 +108,8 @@ public class MovieDetailsActivity extends AppCompatActivity {
             String path=null;
             if(s==null||s=="")
             {
+
+                setlistener(path);
                 return ;
             }
             try
@@ -116,12 +119,12 @@ public class MovieDetailsActivity extends AppCompatActivity {
                 JSONArray arr=root.getJSONArray("results");
                 root=arr.getJSONObject(0);
                 path=root.getString("key");
+                setlistener(path);
             }
             catch (Exception e)
             {
-
+                setlistener(path);
             }
-            setlistener(path);
         }
         protected String getpath(URL url)
         {

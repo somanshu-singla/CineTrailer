@@ -16,11 +16,9 @@ public class YoutubeWeb extends AppCompatActivity {
         WebView webView=(WebView)findViewById(R.id.web);
         String url=movie.getTrailer_path();
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.setWebViewClient(new WebViewClient(){
-
-        });
-        webView.loadUrl(url);
         setTitle(movie.getOriginal_title());
+        webView.setWebViewClient(new WebViewClient(){});
+        webView.loadUrl(url);
     }
 }
 
